@@ -1,4 +1,4 @@
-# Olá, eu sou o Danilo Fernandes 👋
+# Olá, sou Danilo Fernandes 👋
 
 Sou estudante de Ciência da Computação e apaixonado por transformar dados em conhecimento útil. Gosto de explorar como a inteligência artificial e a análise de dados podem resolver problemas reais.
 
