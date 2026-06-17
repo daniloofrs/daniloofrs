@@ -1,16 +1,15 @@
-## Hi there 👋
+# Olá, eu sou o Danilo Fernandes 👋
 
-<!--
-**daniloofrs/daniloofrs** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Sou estudante de Ciência da Computação e apaixonado por transformar dados em conhecimento útil. Gosto de explorar como a inteligência artificial e a análise de dados podem resolver problemas reais.
 
-Here are some ideas to get you started:
+### 🛠️ Tecnologias e Ferramentas
+- **Linguagens:** Python, SQL  
+- **Dados & IA:** Pandas, NumPy.  
+- **Outros:** Git/GitHub, metodologias ágeis  
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🚀 O que estou fazendo agora
+- Criando projetos práticos de análise de dados.  
+- Aprofundando meus estudos em Machine Learning e Engenharia de Dados.  
+
+### 📫 Onde me encontrar
+- [LinkedIn](https://www.linkedin.com/in/daniloofrs/)
