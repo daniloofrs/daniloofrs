@@ -17,8 +17,8 @@ Sou estudante de Ciência da Computação e apaixonado por transformar dados em 
 
 ### 📊 Estatísticas do GitHub
 <p align="left">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=daniloofrs&show_icons=true&theme=dracula&include_all_commits=true" height="180" />
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&theme=dracula" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api?username=daniloofrs&show_icons=true&theme=dracula&include_all_commits=true" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&theme=dracula" height="180" />
 </p>
 
 ### 🌐 Onde me encontrar
