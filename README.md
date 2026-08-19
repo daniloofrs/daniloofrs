@@ -1,31 +1,54 @@
 # Olá, sou Danilo Fernandes 👋
 
-Sou estudante de Ciência da Computação e apaixonado por transformar dados em conhecimento útil. Gosto de explorar como a inteligência artificial e a análise de dados podem resolver problemas reais.
+Sou estudante de Ciência da Computação focado em Engenharia de Dados, Inteligência Artificial e Automação de Processos. Construo pipelines de dados, integrações e soluções orientadas a resolver problemas reais através da análise e modelagem.
 
-### 🛠 Tecnologias e Ferramentas
+---
+
+### 🛠 Tecnologias & Ferramentas
+
+**Linguagens & Análise de Dados**  
 <p align="left">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" />
   <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
   <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/n8n-%23EA4B71.svg?style=for-the-badge&logo=n8n&logoColor=white" />
-  <img src="https://img.shields.io/badge/ollama-%23000000.svg?style=for-the-badge&logo=ollama&logoColor=white" />
-  <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" />
 </p>
 
-### 🚀 O que estou fazendo agora
-- Criando projetos práticos de análise de dados.
-- Aprofundando meus estudos em Machine Learning e Engenharia de Dados.
+**IA, Bancos de Dados & Automação**  
+<p align="left">
+  <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-0db7ed?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+</p>
+
+---
+
+### 🚀 Foco Atual
+- 📊 Desenvolvimento de pipelines e modelagem de dados.
+- 🤖 Exploração e implantação de modelos locais via Ollama e fluxos no n8n.
+- 🐳 Práticas de conteinerização com Docker e arquitetura de bancos relacionais.
+
+---
 
 ### 📊 Estatísticas do GitHub
+
 <p align="left">
-  <img src="https://streak-stats.demolab.com/?user=daniloofrs&theme=dracula" height="180" />
+  <img src="https://github-readme-stats.vercel.app/api?username=daniloofrs&show_icons=true&theme=dracula&rank_icon=github&include_all_commits=true" height="150" alt="Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&theme=dracula&hide=html,css" height="150" alt="Top Langs" />
 </p>
-### 🌐 Onde me encontrar
+
+<p align="left">
+  <img src="https://streak-stats.demolab.com/?user=daniloofrs&theme=dracula" height="150" alt="Streak" />
+</p>
+
+---
+
+### 🌐 Conecte-se comigo
+
 <p align="left">
   <a href="https://linkedin.com/in/daniloofrs" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
 </p>
