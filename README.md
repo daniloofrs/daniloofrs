@@ -35,8 +35,12 @@ Sou estudante de Ciência da Computação focado em Engenharia de Dados, Intelig
 ### 📊 Estatísticas do GitHub
 
 <p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=daniloofrs&show_icons=true&theme=dracula&rank_icon=github&include_all_commits=true" height="150" alt="Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&theme=dracula&hide=html,css" height="150" alt="Top Langs" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=daniloofrs&show_icons=true&theme=dracula" height="150" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&theme=dracula" height="150" alt="Top Languages" />
+</p>
+
+<p align="left">
+  <img src="https://streak-stats.demolab.com?user=daniloofrs&theme=dracula" height="150" alt="GitHub Streak" />
 </p>
 
 <p align="left">
