@@ -21,8 +21,6 @@ Estudante de Ciência da Computação · foco em pipelines, modelagem e ingestã
 📊 &nbsp;Desenvolvo projetos de dados cobrindo ingestão automatizada via APIs REST, tratamento e persistência tabular.\
 🐳 &nbsp;Utilizo Docker e Docker Compose para containerizar bancos de dados relacionais e serviços com persistência em volumes.\
 🌱 &nbsp;Aprofundando conhecimentos em modelagem relacional, automação de fluxos e pipelines de dados.\
-💬 &nbsp;Aberto a conexões, trocas de conhecimento sobre engenharia de dados e projetos open source.\
-✉️ &nbsp;Você pode entrar em contato comigo por e-mail ou LinkedIn para trocarmos uma ideia!
 
 ### 🛠 &nbsp;Tecnologias & Ferramentas
 
