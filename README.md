@@ -2,53 +2,48 @@
 
 # Danilo Fernandes
 
-**Engenharia de Dados · Python · PostgreSQL · Docker**
+**Engenharia de Dados · Python · PostgreSQL · Docker · dbt**
 
-Estudante de Ciência da Computação · foco em pipelines, modelagem e ingestão de dados
+Estudante de Ciência da Computação · Ingestão automatizada, modelagem relacional/dimensional e conteinerização declarativa
 
-<a href="mailto:danilofernandes10a@gmail.com"><img src="https://img.shields.io/badge/E--mail-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="E-mail" /></a>
-<a href="https://linkedin.com/in/daniloofrs"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-
-**[Sobre](#-sobre-mim) · [Stack](#-tecnologias--ferramentas) · [Métricas](#-estatísticas-do-github) · [Contato](#-conecte-se-comigo)**
+<p align="center">
+  <a href="mailto:danilofernandes10a@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://linkedin.com/in/daniloofrs"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/daniloofrs"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+</p>
 
 </div>
 
 ---
 
-### 👨🏻‍💻 &nbsp;Sobre Mim
+### 👨🏻‍💻 Sobre Mim
 
-🎓 &nbsp;Estudante de Ciência da Computação focado em Engenharia e Análise de Dados.\
-📊 &nbsp;Desenvolvo projetos de dados cobrindo ingestão automatizada via APIs REST, tratamento e persistência tabular.\
-🐳 &nbsp;Utilizo Docker e Docker Compose para containerizar bancos de dados relacionais e serviços com persistência em volumes.\
-🌱 &nbsp;Aprofundando conhecimentos em modelagem relacional, automação de fluxos e pipelines de dados.\
+- 🎓 **Formação**: Estudante de Ciência da Computação focado em **Engenharia e Arquitetura de Dados**.
+- 🛠️ **Foco de Atuação**: Construção de pipelines ponta a ponta com ingestão via APIs REST, tratamento e estruturação tabular, e modelagem dimensional.
+- ⚙️ **Princípios Técnicos**: Reprodutibilidade determinística com Docker e Docker Compose, separação rigorosa de variáveis de ambiente (`.env.example`), idempotência e integridade relacional.
 
-### 🛠 &nbsp;Tecnologias & Ferramentas
+---
 
-![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)&nbsp;
-![SQL](https://img.shields.io/badge/-SQL-05122A?style=flat&logo=postgresql&logoColor=4479A1)&nbsp;
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-05122A?style=flat&logo=postgresql&logoColor=4169E1)\
-![Docker](https://img.shields.io/badge/-Docker-05122A?style=flat&logo=docker&logoColor=2496ED)&nbsp;
-![Docker Compose](https://img.shields.io/badge/-Docker%20Compose-05122A?style=flat&logo=docker&logoColor=2496ED)&nbsp;
-![n8n](https://img.shields.io/badge/-n8n-05122A?style=flat&logo=n8n&logoColor=EA4B71)&nbsp;
-![Ollama](https://img.shields.io/badge/-Ollama-05122A?style=flat&logo=ollama&logoColor=white)\
-![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
-![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
-![Linux](https://img.shields.io/badge/-Linux-05122A?style=flat&logo=linux&logoColor=FCC624)&nbsp;
-![Bash](https://img.shields.io/badge/-Bash-05122A?style=flat&logo=gnubash&logoColor=4EAA25)\
-![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC)
+### 🚀 Projetos em Destaque
 
-### ⚙️ &nbsp;Estatísticas do GitHub
+| Projeto | Arquitetura & O que entrega | Stack & Engenharia | Repositório |
+| :--- | :--- | :--- | :---: |
+| **API Data Fetcher** <br>*(Pipeline Autoral)* | Pipeline automatizado de extração cambial em tempo real (USD-BRL) via API REST, com persistência relacional no PostgreSQL e append estruturado em CSV. Ambiente 100% orquestrado via Docker Compose com persistência em volumes. | `Python 3.11+`<br>`PostgreSQL`<br>`Docker Compose`<br>`psycopg v3` | [Acessar Projeto ➔](https://github.com/daniloofrs/api-data-fetcher) |
+| **Currency Data Pipeline** <br>*(Arquitetura Medallion)* | Pipeline analítico *end-to-end* aplicando arquitetura em camadas (**Bronze** em JSONB bruto, **Silver** com desduplicação/limpeza e **Gold** com modelagem dimensional) e **71 testes automatizados de qualidade** no dbt. | `dbt-postgres`<br>`PostgreSQL 16`<br>`Docker`<br>`Python` | [Acessar Projeto ➔](https://github.com/daniloofrs/data-pipeline-dbt) |
 
-<p align="center">
-<a href="https://github.com/daniloofrs">
-  <img height="180em" src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=daniloofrs&show_icons=true&include_all_commits=true&count_private=true&theme=dark"/>
-  <img height="180em" src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&theme=dark"/>
-</a>
-</p>
+---
 
-### 🤝🏻 &nbsp;Conecte-se Comigo
+### 🛠️ Tecnologias & Ferramentas
 
-<p align="center">
-<a href="https://linkedin.com/in/daniloofrs"><img src="https://img.shields.io/badge/-Danilo%20Fernandes-0077B5?style=flat&logo=Linkedin&logoColor=white"/></a>
-<a href="mailto:danilofernandes10a@gmail.com"><img src="https://img.shields.io/badge/-danilofernandes10a@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
-</p>
+- **Linguagens & Consulta**: Python 3.11+, SQL (DDL, DML, consultas relacionais), Bash
+- **Bancos de Dados & Armazenamento**: PostgreSQL 16 (volumes Docker, tipagem estrita, JSONB)
+- **Transformação & Orquestração**: dbt-core (modelagem dimensional, testes de schema), automações n8n
+- **DevOps & Ambiente**: Docker, Docker Compose, Linux, Git, GitHub
+- **Bibliotecas Python**: `requests`, `psycopg (v3)`, `python-dotenv`
+
+---
+
+### 📬 Conecte-se Comigo
+
+- 💼 **LinkedIn**: [linkedin.com/in/daniloofrs](https://linkedin.com/in/daniloofrs)
+- ✉️ **E-mail**: [danilofernandes10a@gmail.com](mailto:danilofernandes10a@gmail.com)
