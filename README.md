@@ -1,84 +1,86 @@
 <div align="center">
 
-  <!-- Header em SVG no estilo cylinder -->
-  <img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:09111e,45:132743,100:00adb5&height=220&section=header&text=Danilo%20Fernandes&fontSize=46&fontColor=ffffff&fontAlignY=38&desc=Ci%C3%AAncia%20da%20Computa%C3%A7%C3%A3o%20%E2%80%A2%20Engenharia%20de%20Dados%20%E2%80%A2%20Backend&descSize=15&descAlignY=58" width="100%" />
+  <!-- Header minimalista em preto absoluto e tipografia austera -->
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,100:080808&height=170&section=header&text=DANILO%20FERNANDES&fontSize=50&fontColor=F5F5F5&fontAlignY=42&desc=DATA%20%26%20BACKEND%20ENGINEERING&descSize=13&descAlignY=64" width="100%" />
 
-  <!-- Linha animada com foco técnico direto -->
-  <a href="https://github.com/daniloofrs">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&pause=1000&color=00ADB5&center=true&vCenter=true&width=620&lines=Pipelines+de+Dados+%E2%80%A2+Docker+%E2%80%A2+PostgreSQL;Ingest%C3%A3o+de+APIs+REST+e+automa%C3%A7%C3%A3o+em+Python;Estudante+de+Ci%C3%AAncia+da+Computa%C3%A7%C3%A3o" alt="Typing SVG" />
-  </a>
+  <!-- A fita vermelha industrial da lateral do jewel case (sem texto óbvio) -->
+  <p align="center">
+    <img src="https://img.shields.io/badge/%E2%96%AE%E2%96%AE%E2%96%AE%E2%96%AE%E2%96%AE%E2%96%AE-FF0000?style=flat-square&color=FF0000" alt="seal" />
+  </p>
 
-  <!-- Links de contato -->
-  <p>
+  <p align="center">
+    <code>PYTHON · POSTGRESQL · DOCKER COMPOSE · LINUX</code>
+  </p>
+
+  <!-- Botões de contato minimalistas em preto e vermelho -->
+  <p align="center">
     <a href="https://linkedin.com/in/daniloofrs" target="_blank">
-      <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+      <img src="https://img.shields.io/badge/LINKEDIN-000000?style=flat-square&logo=linkedin&logoColor=FF0000" />
     </a>
     <a href="mailto:danilofernandes10a@gmail.com">
-      <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+      <img src="https://img.shields.io/badge/EMAIL-000000?style=flat-square&logo=gmail&logoColor=FF0000" />
     </a>
-    <img src="https://komarev.com/ghpvc/?username=daniloofrs&style=for-the-badge&color=132743&label=VIEWS" />
+    <a href="https://github.com/daniloofrs">
+      <img src="https://img.shields.io/badge/GITHUB-000000?style=flat-square&logo=github&logoColor=FFFFFF" />
+    </a>
   </p>
 
 </div>
 
 ---
 
-### Sobre mim
+### // 01. VISÃO
 
-<table>
-  <tr>
-    <td width="33%" align="center">
-      <h3>O que eu busco</h3>
-      <p>Construir rotinas que coletam dados e salvam em bancos de forma confiável, sem quebrar quando a rede oscila ou a API muda.</p>
-    </td>
-    <td width="33%" align="center">
-      <h3>Como trabalho</h3>
-      <p>Escrevo scripts em Python, subo bancos em contêineres Docker para facilitar testes e modelo tabelas no PostgreSQL.</p>
-    </td>
-    <td width="33%" align="center">
-      <h3>Momento atual</h3>
-      <p>Estudo Ciência da Computação e foco meu tempo livre em criar projetos práticos para complementar o que vejo na faculdade.</p>
-    </td>
-  </tr>
-</table>
+Estudante de Ciência da Computação voltado para infraestrutura e fluxo de dados. Minha prioridade é construir sistemas enxutos, sem excesso de dependências e previsíveis:
+
+* **Ingestão**: Scripts em Python para consumo direto de APIs REST com tratamento de erros.
+* **Persistência**: Bancos relacionais com modelagem estruturada no PostgreSQL.
+* **Isolamento**: Ambientes locais conteinerizados via Docker Compose, com persistência em volumes.
 
 ---
 
-### Repositórios e projetos
+### // 02. PROJETOS
 
-#### Destaque: Ingestão de dados e persistência em banco
+#### API DATA FETCHER
 
 <div align="center">
   <a href="https://github.com/daniloofrs/api-data-fetcher">
-    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=daniloofrs&repo=api-data-fetcher&theme=tokyonight&hide_border=true&title_color=00ADB5&icon_color=00ADB5" width="70%" />
+    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=daniloofrs&repo=api-data-fetcher&theme=dark&bg_color=000000&title_color=FF0000&icon_color=FF0000&text_color=999999&hide_border=false&border_color=222222" width="70%" />
   </a>
 </div>
 
-> **[🪙 API Data Fetcher](https://github.com/daniloofrs/api-data-fetcher)**  
-> Script que consulta taxas de câmbio (USD/BRL) em uma API pública e salva os registros no **PostgreSQL** e em um arquivo CSV local. Toda a aplicação sobe com um único comando via **Docker Compose**, mantendo os dados salvos em volumes mesmo após reiniciar os contêineres.  
-> `Python` · `PostgreSQL` · `Docker Compose` · `psycopg v3` · `Linux`
+```text
+STATUS    : ATIVO
+STACK     : PYTHON 3.11+ · POSTGRESQL · DOCKER COMPOSE · PSYCOPG3
+EXECUÇÃO  : docker compose up -d --build
+```
+
+Aplicação contínua que coleta taxas cambiais (USD/BRL) em tempo real via API pública. Os dados são gravados simultaneamente em tabelas relacionais do PostgreSQL e em arquivo CSV incremental. Todo o ambiente é isolado via Docker Compose com mapeamento de volumes.
 
 <br/>
 
-#### Estudo: Transformação com dbt e arquitetura em camadas
+#### CURRENCY DATA PIPELINE
 
 <details>
-<summary><b>Ver detalhes do projeto: Currency Data Pipeline</b></summary>
+<summary><b>[ EXPANDIR NOTAS DE ESTUDO // DBT ]</b></summary>
 <br/>
 
-> **[💱 Currency Data Pipeline](https://github.com/daniloofrs/data-pipeline-dbt)**  
-> Projeto de estudo sobre a **Arquitetura Medallion** (Bronze, Silver e Gold) usando **dbt**. O objetivo foi praticar a ingestão de dados em JSON bruto, a criação de tabelas analíticas intermediárias e a validação de regras com testes automáticos.  
-> `dbt` · `PostgreSQL 16` · `Python` · `Docker`
+```text
+STATUS    : EXPERIMENTAL
+CONCEITO  : ARQUITETURA MEDALLION (BRONZE · SILVER · GOLD)
+STACK     : DBT-POSTGRES · POSTGRESQL 16 · PYTHON · DOCKER
+```
+
+Laboratório prático focado em arquitetura analítica em camadas e automação de testes de qualidade de dados com dbt.
 
 </details>
 
 ---
 
-### Tecnologias e ferramentas
+### // 03. STACK
 
 <div align="center">
 
-  <!-- Painel do skillicons.dev -->
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=python,postgres,docker,linux,bash,git,github,vscode&theme=dark" />
   </a>
@@ -87,25 +89,25 @@
 
 <br/>
 
-<div align="center">
-
-| Área | Tecnologias que uso |
-| :--- | :--- |
-| **Linguagens** | Python para scripts de ingestão e automação; SQL para criação de tabelas e consultas |
-| **Banco de dados** | PostgreSQL para persistência estruturada e testes relacionais |
-| **Ambiente e containers** | Docker e Docker Compose para isolar serviços; Linux e Bash no dia a dia |
-| **Controle de versão** | Git e GitHub para versionamento de código e documentação |
-
-</div>
+```text
++---------------------+--------------------------------------------------------+
+| SEGMENTO            | FERRAMENTAS                                            |
++---------------------+--------------------------------------------------------+
+| CORE                | Python, SQL, Bash Shell                                |
+| STORAGE             | PostgreSQL (modelagem relacional, persistência local)  |
+| INFRA               | Docker, Docker Compose, Linux                          |
+| VERSIONAMENTO       | Git, GitHub                                            |
++---------------------+--------------------------------------------------------+
+```
 
 ---
 
-### Atividade no GitHub
+### // 04. ATIVIDADE
 
 <div align="center">
 
-  <img src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=daniloofrs&show_icons=true&hide_border=true&theme=tokyonight&bg_color=09111e&title_color=00ADB5&icon_color=00ADB5" width="48%" />
-  <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&hide_border=true&theme=tokyonight&bg_color=09111e&title_color=00ADB5&text_color=c5c6c7" width="48%" />
+  <img src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=daniloofrs&show_icons=true&hide_border=false&border_color=222222&bg_color=000000&title_color=FF0000&icon_color=FF0000&text_color=888888" width="48%" />
+  <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&hide_border=false&border_color=222222&bg_color=000000&title_color=FF0000&text_color=888888" width="48%" />
 
 </div>
 
@@ -113,7 +115,7 @@
 
 <div align="center">
 
-  <!-- Animação do Snake Game -->
+  <!-- Snake game em escala monocromática discreta -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/daniloofrs/daniloofrs/output/github-contribution-grid-snake-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/daniloofrs/daniloofrs/output/github-contribution-grid-snake.svg">
@@ -124,17 +126,17 @@
 
 ---
 
-### Contato
+### // 05. CONTATO
 
-Estou aberto a conversas sobre projetos de dados e oportunidades de estágio.
+Aberto a conversas técnicas e oportunidades de estágio.
 
 <div align="center">
 
   <a href="https://www.linkedin.com/in/daniloofrs" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+    <img src="https://img.shields.io/badge/LINKEDIN-FF0000?style=flat-square&logo=linkedin&logoColor=white" />
   </a>
   <a href="mailto:danilofernandes10a@gmail.com">
-    <img src="https://img.shields.io/badge/Enviar%20E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+    <img src="https://img.shields.io/badge/EMAIL-111111?style=flat-square&logo=gmail&logoColor=FF0000" />
   </a>
 
 </div>
@@ -142,8 +144,5 @@ Estou aberto a conversas sobre projetos de dados e oportunidades de estágio.
 <br/>
 
 <div align="center">
-
-  <!-- Rodapé espelhado no estilo cylinder -->
-  <img src="https://capsule-render.vercel.app/api?type=cylinder&color=0:00adb5,55:132743,100:09111e&height=120&section=footer" width="100%" />
-
+  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,100:080808&height=30&section=footer" width="100%" />
 </div>
