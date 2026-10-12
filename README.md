@@ -1,148 +1,54 @@
 <div align="center">
 
-  <!-- Header minimalista em preto absoluto e tipografia austera -->
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,100:080808&height=170&section=header&text=DANILO%20FERNANDES&fontSize=50&fontColor=F5F5F5&fontAlignY=42&desc=DATA%20%26%20BACKEND%20ENGINEERING&descSize=13&descAlignY=64" width="100%" />
+# Danilo Fernandes
 
-  <!-- A fita vermelha industrial da lateral do jewel case (sem texto óbvio) -->
-  <p align="center">
-    <img src="https://img.shields.io/badge/%E2%96%AE%E2%96%AE%E2%96%AE%E2%96%AE%E2%96%AE%E2%96%AE-FF0000?style=flat-square&color=FF0000" alt="seal" />
-  </p>
+**Engenharia de Dados · Python · PostgreSQL · Docker**
 
-  <p align="center">
-    <code>PYTHON · POSTGRESQL · DOCKER COMPOSE · LINUX</code>
-  </p>
+Estudante de Ciência da Computação · foco em pipelines, modelagem e ingestão de dados
 
-  <!-- Botões de contato minimalistas em preto e vermelho -->
-  <p align="center">
-    <a href="https://linkedin.com/in/daniloofrs" target="_blank">
-      <img src="https://img.shields.io/badge/LINKEDIN-000000?style=flat-square&logo=linkedin&logoColor=FF0000" />
-    </a>
-    <a href="mailto:danilofernandes10a@gmail.com">
-      <img src="https://img.shields.io/badge/EMAIL-000000?style=flat-square&logo=gmail&logoColor=FF0000" />
-    </a>
-    <a href="https://github.com/daniloofrs">
-      <img src="https://img.shields.io/badge/GITHUB-000000?style=flat-square&logo=github&logoColor=FFFFFF" />
-    </a>
-  </p>
+<a href="mailto:danilofernandes10a@gmail.com"><img src="https://img.shields.io/badge/E--mail-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="E-mail" /></a>
+<a href="https://linkedin.com/in/daniloofrs"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+
+**[Sobre](#-sobre-mim) · [Stack](#-tecnologias--ferramentas) · [Métricas](#-estatísticas-do-github) · [Contato](#-conecte-se-comigo)**
 
 </div>
 
 ---
 
-### // 01. VISÃO
+### 👨🏻‍💻 &nbsp;Sobre Mim
 
-Estudante de Ciência da Computação voltado para infraestrutura e fluxo de dados. Minha prioridade é construir sistemas enxutos, sem excesso de dependências e previsíveis:
+🎓 &nbsp;Estudante de Ciência da Computação focado em Engenharia e Análise de Dados.\
+📊 &nbsp;Desenvolvo projetos de dados cobrindo ingestão automatizada via APIs REST, tratamento e persistência tabular.\
+🐳 &nbsp;Utilizo Docker e Docker Compose para containerizar bancos de dados relacionais e serviços com persistência em volumes.\
+🌱 &nbsp;Aprofundando conhecimentos em modelagem relacional, automação de fluxos e pipelines de dados.\
 
-* **Ingestão**: Scripts em Python para consumo direto de APIs REST com tratamento de erros.
-* **Persistência**: Bancos relacionais com modelagem estruturada no PostgreSQL.
-* **Isolamento**: Ambientes locais conteinerizados via Docker Compose, com persistência em volumes.
+### 🛠 &nbsp;Tecnologias & Ferramentas
 
----
+![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)&nbsp;
+![SQL](https://img.shields.io/badge/-SQL-05122A?style=flat&logo=postgresql&logoColor=4479A1)&nbsp;
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-05122A?style=flat&logo=postgresql&logoColor=4169E1)\
+![Docker](https://img.shields.io/badge/-Docker-05122A?style=flat&logo=docker&logoColor=2496ED)&nbsp;
+![Docker Compose](https://img.shields.io/badge/-Docker%20Compose-05122A?style=flat&logo=docker&logoColor=2496ED)&nbsp;
+![n8n](https://img.shields.io/badge/-n8n-05122A?style=flat&logo=n8n&logoColor=EA4B71)&nbsp;
+![Ollama](https://img.shields.io/badge/-Ollama-05122A?style=flat&logo=ollama&logoColor=white)\
+![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
+![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
+![Linux](https://img.shields.io/badge/-Linux-05122A?style=flat&logo=linux&logoColor=FCC624)&nbsp;
+![Bash](https://img.shields.io/badge/-Bash-05122A?style=flat&logo=gnubash&logoColor=4EAA25)\
+![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC)
 
-### // 02. PROJETOS
+### ⚙️ &nbsp;Estatísticas do GitHub
 
-#### API DATA FETCHER
+<p align="center">
+<a href="https://github.com/daniloofrs">
+  <img height="180em" src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=daniloofrs&show_icons=true&include_all_commits=true&count_private=true&theme=dark"/>
+  <img height="180em" src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&theme=dark"/>
+</a>
+</p>
 
-<div align="center">
-  <a href="https://github.com/daniloofrs/api-data-fetcher">
-    <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/pin/?username=daniloofrs&repo=api-data-fetcher&theme=dark&bg_color=000000&title_color=FF0000&icon_color=FF0000&text_color=999999&hide_border=false&border_color=222222" width="70%" />
-  </a>
-</div>
+### 🤝🏻 &nbsp;Conecte-se Comigo
 
-```text
-STATUS    : ATIVO
-STACK     : PYTHON 3.11+ · POSTGRESQL · DOCKER COMPOSE · PSYCOPG3
-EXECUÇÃO  : docker compose up -d --build
-```
-
-Aplicação contínua que coleta taxas cambiais (USD/BRL) em tempo real via API pública. Os dados são gravados simultaneamente em tabelas relacionais do PostgreSQL e em arquivo CSV incremental. Todo o ambiente é isolado via Docker Compose com mapeamento de volumes.
-
-<br/>
-
-#### CURRENCY DATA PIPELINE
-
-<details>
-<summary><b>[ EXPANDIR NOTAS DE ESTUDO // DBT ]</b></summary>
-<br/>
-
-```text
-STATUS    : EXPERIMENTAL
-CONCEITO  : ARQUITETURA MEDALLION (BRONZE · SILVER · GOLD)
-STACK     : DBT-POSTGRES · POSTGRESQL 16 · PYTHON · DOCKER
-```
-
-Laboratório prático focado em arquitetura analítica em camadas e automação de testes de qualidade de dados com dbt.
-
-</details>
-
----
-
-### // 03. STACK
-
-<div align="center">
-
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,postgres,docker,linux,bash,git,github,vscode&theme=dark" />
-  </a>
-
-</div>
-
-<br/>
-
-```text
-+---------------------+--------------------------------------------------------+
-| SEGMENTO            | FERRAMENTAS                                            |
-+---------------------+--------------------------------------------------------+
-| CORE                | Python, SQL, Bash Shell                                |
-| STORAGE             | PostgreSQL (modelagem relacional, persistência local)  |
-| INFRA               | Docker, Docker Compose, Linux                          |
-| VERSIONAMENTO       | Git, GitHub                                            |
-+---------------------+--------------------------------------------------------+
-```
-
----
-
-### // 04. ATIVIDADE
-
-<div align="center">
-
-  <img src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=daniloofrs&show_icons=true&hide_border=false&border_color=222222&bg_color=000000&title_color=FF0000&icon_color=FF0000&text_color=888888" width="48%" />
-  <img src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&hide_border=false&border_color=222222&bg_color=000000&title_color=FF0000&text_color=888888" width="48%" />
-
-</div>
-
-<br/>
-
-<div align="center">
-
-  <!-- Snake game em escala monocromática discreta -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/daniloofrs/daniloofrs/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/daniloofrs/daniloofrs/output/github-contribution-grid-snake.svg">
-    <img alt="Snake contribution animation" src="https://raw.githubusercontent.com/daniloofrs/daniloofrs/output/github-contribution-grid-snake.svg" width="100%">
-  </picture>
-
-</div>
-
----
-
-### // 05. CONTATO
-
-Aberto a conversas técnicas e oportunidades de estágio.
-
-<div align="center">
-
-  <a href="https://www.linkedin.com/in/daniloofrs" target="_blank">
-    <img src="https://img.shields.io/badge/LINKEDIN-FF0000?style=flat-square&logo=linkedin&logoColor=white" />
-  </a>
-  <a href="mailto:danilofernandes10a@gmail.com">
-    <img src="https://img.shields.io/badge/EMAIL-111111?style=flat-square&logo=gmail&logoColor=FF0000" />
-  </a>
-
-</div>
-
-<br/>
-
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,100:080808&height=30&section=footer" width="100%" />
-</div>
+<p align="center">
+<a href="https://linkedin.com/in/daniloofrs"><img src="https://img.shields.io/badge/-Danilo%20Fernandes-0077B5?style=flat&logo=Linkedin&logoColor=white"/></a>
+<a href="mailto:danilofernandes10a@gmail.com"><img src="https://img.shields.io/badge/-danilofernandes10a@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
+</p>
