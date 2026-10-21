@@ -4,51 +4,52 @@
 
 **Engenharia de Dados · Python · PostgreSQL · Docker**
 
-Estudante de Ciência da Computação · foco em pipelines, modelagem e ingestão de dados
+Estudante de Ciência da Computação focado em pipelines de ingestão, modelagem relacional e automação de rotinas.
 
-<a href="mailto:danilofernandes10a@gmail.com"><img src="https://img.shields.io/badge/E--mail-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="E-mail" /></a>
-<a href="https://linkedin.com/in/daniloofrs"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-
-**[Sobre](#-sobre-mim) · [Stack](#-tecnologias--ferramentas) · [Métricas](#-estatísticas-do-github) · [Contato](#-conecte-se-comigo)**
+[LinkedIn](https://linkedin.com/in/daniloofrs) · [E-mail](mailto:danilofernandes10a@gmail.com) · [Projetos](#-projetos-em-destaque)
 
 </div>
 
 ---
 
-### 👨🏻‍💻 &nbsp;Sobre Mim
+### 👨🏻‍💻 Sobre mim
 
-🎓 &nbsp;Estudante de Ciência da Computação focado em Engenharia e Análise de Dados.\
-📊 &nbsp;Desenvolvo projetos de dados cobrindo ingestão automatizada via APIs REST, tratamento e persistência tabular.\
-🐳 &nbsp;Utilizo Docker e Docker Compose para containerizar bancos de dados relacionais e serviços com persistência em volumes.\
-🌱 &nbsp;Aprofundando conhecimentos em modelagem relacional, automação de fluxos e pipelines de dados.\
+Sou estudante de Ciência da Computação e direciono meus estudos para a parte prática da Engenharia de Dados. Meu foco é construir fluxos confiáveis: extrair dados brutos de APIs, tratar via código e estruturar o armazenamento em bancos relacionais com ambientes reproduzíveis.
 
-### 🛠 &nbsp;Tecnologias & Ferramentas
+- **No dia a dia:** construo rotinas de ingestão em Python (Requests), modelo tabelas no PostgreSQL e subo tudo containerizado com Docker Compose usando volumes para garantir a persistência dos dados.
+- **Momento atual:** aprofundando em modelagem relacional avançada, otimização de queries SQL e automação de rotinas de dados.
+- **Objetivo:** primeiro estágio ou oportunidade júnior em Engenharia ou Análise de Dados.
 
-![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)&nbsp;
-![SQL](https://img.shields.io/badge/-SQL-05122A?style=flat&logo=postgresql&logoColor=4479A1)&nbsp;
-![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-05122A?style=flat&logo=postgresql&logoColor=4169E1)\
-![Docker](https://img.shields.io/badge/-Docker-05122A?style=flat&logo=docker&logoColor=2496ED)&nbsp;
-![Docker Compose](https://img.shields.io/badge/-Docker%20Compose-05122A?style=flat&logo=docker&logoColor=2496ED)&nbsp;
-![n8n](https://img.shields.io/badge/-n8n-05122A?style=flat&logo=n8n&logoColor=EA4B71)&nbsp;
-![Ollama](https://img.shields.io/badge/-Ollama-05122A?style=flat&logo=ollama&logoColor=white)\
-![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
-![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
-![Linux](https://img.shields.io/badge/-Linux-05122A?style=flat&logo=linux&logoColor=FCC624)&nbsp;
-![Bash](https://img.shields.io/badge/-Bash-05122A?style=flat&logo=gnubash&logoColor=4EAA25)\
-![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC)
+---
 
-### ⚙️ &nbsp;Estatísticas do GitHub
+### 🚀 Projetos em Destaque
+
+#### 🔹 [API Data Fetcher](https://github.com/daniloofrs/api-data-fetcher)
+> **Problema:** Coleta e persistência contínua de cotações financeiras em tempo real sem perda de dados entre reinicializações de serviços.  
+> **Solução:** Pipeline automatizado em Python que consome cotações via API REST, conecta via `psycopg` para persistir dados estruturados em banco PostgreSQL e gera exportações tabulares. Todo o ambiente (banco e aplicação) roda isolado e reproduzível via Docker Compose com volume dedicado.  
+> **Stack:** `Python` · `PostgreSQL` · `Docker Compose` · `psycopg`
+
+#### 🔹 [Raio-X dos Gastos Públicos de João Pessoa](https://github.com/daniloofrs/jp-public-spending-etl) *(Em desenvolvimento)*
+> **Problema:** Dificuldade de auditoria e consumo analítico de dados orçamentários brutos municipais devido a inconsistências de padronização e formatos.  
+> **Solução:** Pipeline ETL focado em extrair despesas públicas de João Pessoa (PB), aplicar limpeza rigorosa de caracteres e tipos monetários e carregar em banco relacional modelado para consultas rápidas em SQL.  
+> **Stack:** `Python` · `Pandas` · `PostgreSQL` · `Docker`
+
+---
+
+### 🛠️ Tecnologias & Aplicação Prática
+
+| Domínio | Ferramentas | O que faço com elas |
+| :--- | :--- | :--- |
+| **Linguagens** | `Python`, `SQL`, `Bash` | Scripts de extração de APIs, tratamento de exceções, consultas analíticas e automação no terminal. |
+| **Bancos de Dados** | `PostgreSQL` | Criação de schemas relacionais, constraints (PK/FK), tipos de dados adequados e persistência tabular. |
+| **Infra & DevOps** | `Docker`, `Docker Compose`, `Git` | Subida de bancos e apps em containers, mapeamento de portas, redes isoladas, volumes persistentes e controle de versão. |
+| **Automação** | `n8n` | Construção de fluxos automatizados conectando webhooks, chamadas HTTP e serviços locais. |
+
+---
+
+### 📊 Estatísticas do GitHub
 
 <p align="center">
-<a href="https://github.com/daniloofrs">
-  <img height="180em" src="https://github-readme-stats-anuraghazra1.vercel.app/api?username=daniloofrs&show_icons=true&include_all_commits=true&count_private=true&theme=dark"/>
-  <img height="180em" src="https://github-readme-stats-anuraghazra1.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&theme=dark"/>
-</a>
-</p>
-
-### 🤝🏻 &nbsp;Conecte-se Comigo
-
-<p align="center">
-<a href="https://linkedin.com/in/daniloofrs"><img src="https://img.shields.io/badge/-Danilo%20Fernandes-0077B5?style=flat&logo=Linkedin&logoColor=white"/></a>
-<a href="mailto:danilofernandes10a@gmail.com"><img src="https://img.shields.io/badge/-danilofernandes10a@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
+  <img height="155em" src="https://github-readme-stats.vercel.app/api?username=daniloofrs&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=tokyonight" alt="Estatísticas do GitHub" />
+  <img height="155em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&hide_border=true&theme=tokyonight" alt="Linguagens mais utilizadas" />
 </p>
