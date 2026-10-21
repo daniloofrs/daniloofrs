@@ -1,55 +1,65 @@
 <div align="center">
-
-# Danilo Fernandes
-
-**Engenharia de Dados · Python · PostgreSQL · Docker**
-
-Estudante de Ciência da Computação focado em pipelines de ingestão, modelagem relacional e automação de rotinas.
-
-[LinkedIn](https://linkedin.com/in/daniloofrs) · [E-mail](mailto:danilofernandes10a@gmail.com) · [Projetos](#-projetos-em-destaque)
-
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=560&lines=Danilo+Fernandes;Engenharia+de+Dados+%C2%B7+Python+%C2%B7+PostgreSQL;Pipelines+de+Ingest%C3%A3o+%26+Docker" alt="Typing SVG">
+  </a>
 </div>
 
----
+#
 
-### 👨🏻‍💻 Sobre mim
+<img align="right" alt="Data & Tech" height="180px" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif">
 
-Sou estudante de Ciência da Computação e direciono meus estudos para a parte prática da Engenharia de Dados. Meu foco é construir fluxos confiáveis: extrair dados brutos de APIs, tratar via código e estruturar o armazenamento em bancos relacionais com ambientes reproduzíveis.
+Me chamo Danilo Fernandes, sou de João Pessoa - PB e curso Ciência da Computação. 
 
-- **No dia a dia:** construo rotinas de ingestão em Python (Requests), modelo tabelas no PostgreSQL e subo tudo containerizado com Docker Compose usando volumes para garantir a persistência dos dados.
-- **Momento atual:** aprofundando em modelagem relacional avançada, otimização de queries SQL e automação de rotinas de dados.
-- **Objetivo:** primeiro estágio ou oportunidade júnior em Engenharia ou Análise de Dados.
+Meu foco prático é em **Engenharia de Dados**: construo rotinas em Python para consumir APIs REST, estruturar armazenamento em PostgreSQL e containerizar bancos e serviços com Docker Compose e volumes persistentes.
 
----
+Atualmente estou em busca do meu primeiro estágio ou oportunidade júnior na área de Dados.
 
-### 🚀 Projetos em Destaque
+#
 
-#### 🔹 [API Data Fetcher](https://github.com/daniloofrs/api-data-fetcher)
-> **Problema:** Coleta e persistência contínua de cotações financeiras em tempo real sem perda de dados entre reinicializações de serviços.  
-> **Solução:** Pipeline automatizado em Python que consome cotações via API REST, conecta via `psycopg` para persistir dados estruturados em banco PostgreSQL e gera exportações tabulares. Todo o ambiente (banco e aplicação) roda isolado e reproduzível via Docker Compose com volume dedicado.  
-> **Stack:** `Python` · `PostgreSQL` · `Docker Compose` · `psycopg`
+<h3 align="left">Conecte-se comigo</h3>
 
-#### 🔹 [Raio-X dos Gastos Públicos de João Pessoa](https://github.com/daniloofrs/jp-public-spending-etl) *(Em desenvolvimento)*
-> **Problema:** Dificuldade de auditoria e consumo analítico de dados orçamentários brutos municipais devido a inconsistências de padronização e formatos.  
-> **Solução:** Pipeline ETL focado em extrair despesas públicas de João Pessoa (PB), aplicar limpeza rigorosa de caracteres e tipos monetários e carregar em banco relacional modelado para consultas rápidas em SQL.  
-> **Stack:** `Python` · `Pandas` · `PostgreSQL` · `Docker`
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-000?style=for-the-badge&logo=linkedin&logoColor=0A66C2)](https://www.linkedin.com/in/daniloofrs/)
+[![E-mail](https://img.shields.io/badge/-Email-000?style=for-the-badge&logo=gmail&logoColor=EA4335)](mailto:danilofernandes10a@gmail.com)
 
----
+<br/>
 
-### 🛠️ Tecnologias & Aplicação Prática
+<h3 align="left">Minha Stack</h3>
 
-| Domínio | Ferramentas | O que faço com elas |
-| :--- | :--- | :--- |
-| **Linguagens** | `Python`, `SQL`, `Bash` | Scripts de extração de APIs, tratamento de exceções, consultas analíticas e automação no terminal. |
-| **Bancos de Dados** | `PostgreSQL` | Criação de schemas relacionais, constraints (PK/FK), tipos de dados adequados e persistência tabular. |
-| **Infra & DevOps** | `Docker`, `Docker Compose`, `Git` | Subida de bancos e apps em containers, mapeamento de portas, redes isoladas, volumes persistentes e controle de versão. |
-| **Automação** | `n8n` | Construção de fluxos automatizados conectando webhooks, chamadas HTTP e serviços locais. |
+<img align="left" alt="Python" title="Python" width="34px" style="padding-right: 12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+<img align="left" alt="PostgreSQL" title="PostgreSQL" width="34px" style="padding-right: 12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" />
+<img align="left" alt="Docker" title="Docker" width="34px" style="padding-right: 12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" />
+<img align="left" alt="Linux" title="Linux" width="34px" style="padding-right: 12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+<img align="left" alt="Bash" title="Bash" width="34px" style="padding-right: 12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg" />
+<img align="left" alt="Git" title="Git" width="34px" style="padding-right: 12px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
 
----
+<br/>
+<br/>
+<br/>
 
-### 📊 Estatísticas do GitHub
+<h3 align="left">Projetos</h3>
 
-<p align="center">
-  <img height="155em" src="https://github-readme-stats.vercel.app/api?username=daniloofrs&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=tokyonight" alt="Estatísticas do GitHub" />
-  <img height="155em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&hide_border=true&theme=tokyonight" alt="Linguagens mais utilizadas" />
+| Projeto | Stack |
+| :--- | :--- |
+| [**API Data Fetcher**](https://github.com/daniloofrs/api-data-fetcher) | `Python` `PostgreSQL` `Docker Compose` `psycopg` |
+| [**Raio-X dos Gastos Públicos de João Pessoa**](https://github.com/daniloofrs/jp-public-spending-etl) *(Em dev)* | `Python` `Pandas` `PostgreSQL` `Docker` |
+
+<br/>
+
+<h3 align="left">Estatísticas do GitHub</h3>
+
+<p>
+  <img 
+    align="left" 
+    alt="GitHub Stats" 
+    height="170" 
+    style="padding-right: 10px;" 
+    src="https://github-readme-stats.vercel.app/api?username=daniloofrs&show_icons=true&locale=pt-br&hide_border=false&bg_color=000000&title_color=ffffff&text_color=ffffff&icon_color=38BDF8&border_color=333333&custom_title=Estat%C3%ADsticas"
+  />
+
+  <img 
+    align="left" 
+    alt="Top Langs" 
+    height="170" 
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=daniloofrs&layout=compact&bg_color=000000&title_color=ffffff&text_color=ffffff&border_color=333333" 
+  />
 </p>
