@@ -15,34 +15,22 @@
 
 <br><br>
 
-<details>
-<summary><code>danilo@github ~ $ cat stack.md</code></summary>
+<h3><code>danilo@github ~ $ cat stack.md</code></h3>
+
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,postgres,docker,linux,bash,git,github,vscode" alt="Minha Stack" />
+  </a>
+</p>
 
 <br>
 
-| Categoria | Tecnologias |
-|---|---|
-| **Linguagens** | Python, SQL, Bash |
-| **Engenharia de Dados** | Ingestão de APIs REST, Modelagem Relacional, Pipelines ETL, Manipulação Tabular |
-| **Bancos de Dados** | PostgreSQL, Modelagem Relacional (PK/FK), Constraints, Índices |
-| **DevOps & Infra** | Docker, Docker Compose, Volumes Persistentes, Redes Isoladas, Linux, Git, GitHub |
-| **Automação** | n8n, Webhooks, Rotinas de Agendamento |
-
-</details>
-
-<br>
-
-<details>
-<summary><code>danilo@github ~ $ cat projects.md</code></summary>
-
-<br>
+<h3><code>danilo@github ~ $ cat projects.md</code></h3>
 
 | Projeto | Stack |
 | :--- | :--- |
 | [**API Data Fetcher**](https://github.com/daniloofrs/api-data-fetcher) | `Python`, `PostgreSQL`, `Docker Compose`, `psycopg` |
 | [**Raio-X dos Gastos Públicos de João Pessoa**](https://github.com/daniloofrs/jp-public-spending-etl) *(Em dev)* | `Python`, `Pandas`, `PostgreSQL`, `Docker` |
-
-</details>
 
 <br>
 
