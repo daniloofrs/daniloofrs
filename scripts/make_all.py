@@ -11,11 +11,10 @@ REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # 1. MAKE ASCII SVG (avi-ascii.svg)
 # ==========================================
 def generate_ascii_svg():
-    print("[1/3] Generating avi-ascii.svg with Kenshin portrait...")
+    print("[1/4] Generating avi-ascii.svg with Kenshin portrait...")
     src_path = os.path.join(REPO_DIR, "assets", "portrait.jpg")
     im = Image.open(src_path).convert("RGB")
 
-    # Red-boost blend for Kenshin's hair & kimono
     r, g, b = im.split()
     custom_gray = Image.blend(r, g, 0.4)
     custom_gray = ImageOps.autocontrast(custom_gray)
@@ -123,14 +122,14 @@ def generate_ascii_svg():
     out_path = os.path.join(REPO_DIR, "avi-ascii.svg")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("".join(p))
-    print(f"[1/3] Wrote {out_path} ({CANVAS_W}x{CANVAS_H})")
+    print(f"[1/4] Wrote {out_path} ({CANVAS_W}x{CANVAS_H})")
 
 
 # ==========================================
 # 2. MAKE INFO CARD SVG (info-card.svg)
 # ==========================================
 def generate_info_card():
-    print("[2/3] Generating info-card.svg...")
+    print("[2/4] Generating info-card.svg...")
     BG = "#0d1117"
     BG2 = "#111722"
     FRAME = "#30363d"
@@ -226,7 +225,6 @@ def generate_info_card():
             y += LINE_H
             i += 1
             continue
-        # kv
         out.append(
             f'<g opacity="0">'
             f'<text x="{PAD_X}" y="{y}" fill="{KEY}" font-weight="bold">{esc(a)}</text>'
@@ -249,14 +247,14 @@ def generate_info_card():
     out_path = os.path.join(REPO_DIR, "info-card.svg")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("\n".join(out))
-    print(f"[2/3] Wrote {out_path} ({W}x{H})")
+    print(f"[2/4] Wrote {out_path} ({W}x{H})")
 
 
 # ==========================================
 # 3. MAKE CONTRIBUTIONS HEATMAP (contrib-heatmap.svg)
 # ==========================================
 def generate_heatmap_svg():
-    print("[3/3] Fetching contributions & rendering heatmap...")
+    print("[3/4] Fetching contributions & rendering heatmap...")
     url = "https://github.com/users/daniloofrs/contributions"
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "X-Requested-With": "XMLHttpRequest"})
     html_doc = urllib.request.urlopen(req).read().decode("utf-8")
@@ -449,10 +447,127 @@ def generate_heatmap_svg():
     out_path = os.path.join(REPO_DIR, "contrib-heatmap.svg")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("".join(p))
-    print(f"[3/3] Wrote {out_path} ({n_cols} weeks, {total} contributions)")
+    print(f"[3/4] Wrote {out_path} ({n_cols} weeks, {total} contributions)")
+
+
+# ==========================================
+# 4. MAKE PROJECT CARDS (project-*.svg)
+# ==========================================
+def generate_project_cards():
+    print("[4/4] Generating project window cards...")
+    W, H = 415, 230
+    PAD = 16
+    TITLEBAR_H = 30
+    FONT = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+    BG = "#0d1117"
+    BG2 = "#111722"
+    FRAME = "#30363d"
+    TITLE_TEXT = "#7d8590"
+    TEXT_COLOR = "#c9d1d9"
+    ACCENT = "#38bdf8"
+    GREEN = "#39d353"
+    YELLOW = "#f2cc60"
+    MUTED = "#8b949e"
+    BADGE_BG = "#1f242c"
+
+    # Card 1: api-data-fetcher
+    card1 = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="{BG2}"/>
+      <stop offset="1" stop-color="{BG}"/>
+    </linearGradient>
+  </defs>
+  <rect width="{W}" height="{H}" rx="10" fill="url(#pbg)"/>
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" fill="none" stroke="{FRAME}"/>
+  <line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>
+  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ff5f56"/>
+  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ffbd2e"/>
+  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#27c93f"/>
+  <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">api-data-fetcher/main.py</text>
+  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{GREEN}" font-size="10" text-anchor="end">● Docker UP</text>
+  <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">API Data Fetcher</text>
+  <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Pipeline em Python consumindo cotações</text>
+  <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">via API REST com persistência contínua</text>
+  <text x="{PAD}" y="112" fill="{TEXT_COLOR}" font-size="11.5">em banco PostgreSQL e append em CSV.</text>
+  <g transform="translate({PAD}, 128)">
+    <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🐳 Docker: <tspan fill="{GREEN}">2 containers</tspan></text>
+  </g>
+  <g transform="translate({PAD+193}, 128)">
+    <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">💾 Volume: <tspan fill="{ACCENT}">pg_data</tspan></text>
+  </g>
+  <g transform="translate({PAD}, 162)">
+    <rect x="0" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="29" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Python</text>
+    <rect x="64" width="76" height="20" rx="4" fill="{FRAME}"/>
+    <text x="102" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">PostgreSQL</text>
+    <rect x="146" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="175" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Docker</text>
+    <rect x="210" width="62" height="20" rx="4" fill="{FRAME}"/>
+    <text x="241" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">psycopg</text>
+  </g>
+  <line x1="0" y1="{H-26}" x2="{W}" y2="{H-26}" stroke="{FRAME}"/>
+  <text x="{PAD}" y="{H-10}" fill="{TITLE_TEXT}" font-size="10">git:(main) • utf-8</text>
+  <text x="{W-PAD}" y="{H-10}" fill="{ACCENT}" font-size="10" text-anchor="end">Ver Repositório ➜</text>
+</svg>"""
+
+    # Card 2: jp-public-spending-etl
+    card2 = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">
+  <defs>
+    <linearGradient id="pbg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="{BG2}"/>
+      <stop offset="1" stop-color="{BG}"/>
+    </linearGradient>
+  </defs>
+  <rect width="{W}" height="{H}" rx="10" fill="url(#pbg2)"/>
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" fill="none" stroke="{FRAME}"/>
+  <line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>
+  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ff5f56"/>
+  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ffbd2e"/>
+  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#27c93f"/>
+  <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">jp-public-spending-etl/etl.py</text>
+  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{YELLOW}" font-size="10" text-anchor="end">● Em Dev</text>
+  <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">Gastos Públicos - JP</text>
+  <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Pipeline ETL para higienização e modelagem</text>
+  <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">relacional dos gastos públicos de João</text>
+  <text x="{PAD}" y="112" fill="{TEXT_COLOR}" font-size="11.5">Pessoa (PB) estruturado para SQL rápido.</text>
+  <g transform="translate({PAD}, 128)">
+    <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🏛️ Fonte: <tspan fill="{YELLOW}">Dados Abertos</tspan></text>
+  </g>
+  <g transform="translate({PAD+193}, 128)">
+    <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">📐 Schema: <tspan fill="{ACCENT}">Star Schema</tspan></text>
+  </g>
+  <g transform="translate({PAD}, 162)">
+    <rect x="0" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="29" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Python</text>
+    <rect x="64" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="93" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Pandas</text>
+    <rect x="128" width="76" height="20" rx="4" fill="{FRAME}"/>
+    <text x="166" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">PostgreSQL</text>
+    <rect x="210" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="239" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Docker</text>
+  </g>
+  <line x1="0" y1="{H-26}" x2="{W}" y2="{H-26}" stroke="{FRAME}"/>
+  <text x="{PAD}" y="{H-10}" fill="{TITLE_TEXT}" font-size="10">git:(main) • utf-8</text>
+  <text x="{W-PAD}" y="{H-10}" fill="{ACCENT}" font-size="10" text-anchor="end">Ver Repositório ➜</text>
+</svg>"""
+
+    p1 = os.path.join(REPO_DIR, "project-api-fetcher.svg")
+    p2 = os.path.join(REPO_DIR, "project-jp-spending.svg")
+    with open(p1, "w", encoding="utf-8") as f:
+        f.write(card1)
+    with open(p2, "w", encoding="utf-8") as f:
+        f.write(card2)
+    print(f"[4/4] Wrote {p1} and {p2}")
+
 
 if __name__ == "__main__":
     generate_ascii_svg()
     generate_info_card()
     generate_heatmap_svg()
-    print("All 3 SVG assets generated successfully!")
+    generate_project_cards()
+    print("All SVG assets generated successfully!")

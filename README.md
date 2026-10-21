@@ -27,10 +27,14 @@
 
 <h3><code>danilo@github ~ $ cat projects.md</code></h3>
 
-| Projeto | Stack |
-| :--- | :--- |
-| [**API Data Fetcher**](https://github.com/daniloofrs/api-data-fetcher) | `Python`, `PostgreSQL`, `Docker Compose`, `psycopg` |
-| [**Raio-X dos Gastos Públicos de João Pessoa**](https://github.com/daniloofrs/jp-public-spending-etl) *(Em dev)* | `Python`, `Pandas`, `PostgreSQL`, `Docker` |
+<p align="center">
+  <a href="https://github.com/daniloofrs/api-data-fetcher">
+    <img src="./project-api-fetcher.svg" width="415" alt="API Data Fetcher" />
+  </a>
+  <a href="https://github.com/daniloofrs/jp-public-spending-etl">
+    <img src="./project-jp-spending.svg" width="415" alt="Gastos Públicos João Pessoa" />
+  </a>
+</p>
 
 <br>
 
