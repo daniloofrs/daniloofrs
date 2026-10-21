@@ -11,44 +11,31 @@ REPO_DIR = r"C:\Users\danil\.gemini\antigravity\scratch\daniloofrs"
 # 1. MAKE ASCII SVG (avi-ascii.svg)
 # ==========================================
 def generate_ascii_svg():
-    print("[1/3] Generating avi-ascii.svg...")
-    avatar_path = os.path.join(os.environ["TEMP"], "avatar.png")
-    im = Image.open(avatar_path).convert("RGB")
-    bg_color = (2, 0, 253)
+    print("[1/3] Generating avi-ascii.svg with Kenshin portrait...")
+    src_path = os.path.join(REPO_DIR, "assets", "portrait.jpg")
+    im = Image.open(src_path).convert("RGB")
 
-    # Set blue background to pure white
-    prepped = Image.new("L", im.size, 255)
-    for y in range(im.height):
-        for x in range(im.width):
-            p = im.getpixel((x, y))
-            dist = sum(abs(p[i] - bg_color[i]) for i in range(3))
-            if dist > 60:
-                gray = int(0.299 * p[0] + 0.587 * p[1] + 0.114 * p[2])
-                prepped.putpixel((x, y), gray)
-            else:
-                prepped.putpixel((x, y), 255)
+    # Red-boost blend for Kenshin's hair & kimono
+    r, g, b = im.split()
+    custom_gray = Image.blend(r, g, 0.4)
+    custom_gray = ImageOps.autocontrast(custom_gray)
+    custom_gray = ImageEnhance.Contrast(custom_gray).enhance(1.35)
 
-    prepped = ImageOps.autocontrast(prepped)
-    prepped = ImageEnhance.Contrast(prepped).enhance(1.3)
-    
     COLS = 100
     ROWS = 53
     CELL_W = 8
     CELL_H = 15
     RAMP = " .`:-=+*cs#%@"
-    
-    prepped = prepped.resize((COLS, ROWS), Image.LANCZOS)
-    px = prepped.load()
-    
+
+    resized = custom_gray.resize((COLS, ROWS), Image.LANCZOS)
+    px = resized.load()
+
     rows_txt = []
     for y in range(ROWS):
         chars = []
         for x in range(COLS):
-            lum = pow(px[x, y] / 255.0, 1.15)
-            if lum >= 0.82:
-                chars.append(" ")
-                continue
-            idx = int((1.0 - lum) * (len(RAMP) - 1) + 0.5)
+            lum = pow(px[x, y] / 255.0, 1.05)
+            idx = int(lum * (len(RAMP) - 1) + 0.5)
             chars.append(RAMP[max(0, min(len(RAMP) - 1, idx))])
         rows_txt.append("".join(chars))
 
@@ -60,7 +47,7 @@ def generate_ascii_svg():
     ART_H = ROWS * CELL_H
     CANVAS_W = 840
     CANVAS_H = 907
-    
+
     BG = "#0d1117"
     BG2 = "#111722"
     FRAME = "#30363d"
@@ -69,9 +56,9 @@ def generate_ascii_svg():
     CURSOR = "#c9d1d9"
     ROW_DUR = 0.11
     STAGGER = 0.11
-    
+
     art_top = TITLEBAR_H + PAD * 0.35
-    
+
     p = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{CANVAS_W}" height="{CANVAS_H}" viewBox="0 0 {CANVAS_W} {CANVAS_H}" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">',
         '<defs><linearGradient id="abg" x1="0" y1="0" x2="0" y2="1">',
@@ -81,14 +68,14 @@ def generate_ascii_svg():
         f'<rect x="0.5" y="0.5" width="{CANVAS_W-1}" height="{CANVAS_H-1}" rx="12" fill="none" stroke="{FRAME}"/>',
         f'<line x1="0" y1="{TITLEBAR_H}" x2="{CANVAS_W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>',
     ]
-    
+
     for i, dot in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
         p.append(f'<circle cx="{PAD + i*20}" cy="{TITLEBAR_H/2}" r="8" fill="{dot}"/>')
     p.append(
         f'<text x="{CANVAS_W/2}" y="{TITLEBAR_H/2 + CHROME_FS*0.35:.1f}" fill="{TITLE_TEXT}" '
         f'font-size="{CHROME_FS}" text-anchor="middle">danilo@github: ~$ ./portrait.sh</text>'
     )
-    
+
     font_size = CELL_H * 0.86
     for ry, line in enumerate(rows_txt):
         y = art_top + ry * CELL_H + CELL_H * 0.74
@@ -115,7 +102,7 @@ def generate_ascii_svg():
             f'<set attributeName="opacity" to="0.85" begin="{delay:.3f}s"/>'
             f'<set attributeName="opacity" to="0" begin="{delay+ROW_DUR:.3f}s"/></rect>'
         )
-        
+
     line_y = TITLEBAR_H + ART_H + PAD * 0.35
     status_y = line_y + STATUS_H * 0.62
     prefix = "danilo@github:~$ whoami Danilo Fernandes "
@@ -132,7 +119,7 @@ def generate_ascii_svg():
         f'keyTimes="0;0.5;0.51;1" dur="1s" repeatCount="indefinite"/></rect>'
     )
     p.append("</svg>")
-    
+
     out_path = os.path.join(REPO_DIR, "avi-ascii.svg")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("".join(p))
@@ -148,9 +135,9 @@ def generate_info_card():
     BG2 = "#111722"
     FRAME = "#30363d"
     TITLE_TEXT = "#7d8590"
-    KEY = "#39d353"       # Classic Fastfetch green
-    VAL = "#c9d1d9"       # light gray values
-    ACCENT = "#58a6ff"    # blue section titles
+    KEY = "#39d353"
+    VAL = "#c9d1d9"
+    ACCENT = "#58a6ff"
     DIM = "#8b949e"
     BULLET = "#39d353"
 
