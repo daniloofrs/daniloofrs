@@ -5,7 +5,7 @@ import html
 import datetime
 from PIL import Image, ImageEnhance, ImageOps
 
-REPO_DIR = r"C:\Users\danil\.gemini\antigravity\scratch\daniloofrs"
+REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # ==========================================
 # 1. MAKE ASCII SVG (avi-ascii.svg)
