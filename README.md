@@ -18,9 +18,7 @@
 <h3><code>danilo@github ~ $ cat stack.md</code></h3>
 
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=python,postgres,docker,linux,bash,git,github,vscode" alt="Minha Stack" />
-  </a>
+  <img src="https://skillicons.dev/icons?i=python,postgres,docker,linux,bash,git,github,vscode" alt="Minha Stack" />
 </p>
 
 <br>
@@ -31,8 +29,8 @@
   <a href="https://github.com/daniloofrs/api-data-fetcher">
     <img src="./project-api-fetcher.svg" width="415" alt="API Data Fetcher" />
   </a>
-  <a href="https://github.com/daniloofrs/jp-public-spending-etl">
-    <img src="./project-jp-spending.svg" width="415" alt="Gastos Públicos João Pessoa" />
+  <a href="https://github.com/daniloofrs/data-pipeline-dbt">
+    <img src="./project-dbt-pipeline.svg" width="415" alt="Currency Data Pipeline dbt" />
   </a>
 </p>
 

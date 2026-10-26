@@ -160,12 +160,12 @@ def generate_info_card():
         ("kv", "Lang", "Python, SQL, Bash"),
         ("kv", "Database", "PostgreSQL (Relational Schemas)"),
         ("kv", "Infra", "Docker, Docker Compose, Linux, Git"),
-        ("kv", "Automate", "n8n"),
+        ("kv", "Automate", "dbt, n8n, GitHub Actions"),
         ("gap", "", ""),
         ("sec", "Highlights", ""),
         ("bullet", "REST API automated ingestion (Requests, psycopg)", ""),
         ("bullet", "Relational databases with Docker Compose volumes", ""),
-        ("bullet", "Tabular data structuring & analytical SQL", ""),
+        ("bullet", "Medallion Architecture & 71 automated dbt tests", ""),
     ]
 
     def esc(s: str) -> str:
@@ -513,7 +513,7 @@ def generate_project_cards():
   <text x="{W-PAD}" y="{H-10}" fill="{ACCENT}" font-size="10" text-anchor="end">Ver Repositório ➜</text>
 </svg>"""
 
-    # Card 2: jp-public-spending-etl
+    # Card 2: data-pipeline-dbt
     card2 = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">
   <defs>
     <linearGradient id="pbg2" x1="0" y1="0" x2="0" y2="1">
@@ -527,29 +527,29 @@ def generate_project_cards():
   <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ff5f56"/>
   <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ffbd2e"/>
   <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#27c93f"/>
-  <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">jp-public-spending-etl/etl.py</text>
-  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{YELLOW}" font-size="10" text-anchor="end">● Em Dev</text>
-  <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">Gastos Públicos - JP</text>
-  <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Pipeline ETL para higienização e modelagem</text>
-  <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">relacional dos gastos públicos de João</text>
-  <text x="{PAD}" y="112" fill="{TEXT_COLOR}" font-size="11.5">Pessoa (PB) estruturado para SQL rápido.</text>
+  <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">data-pipeline-dbt/models</text>
+  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{GREEN}" font-size="10" text-anchor="end">● 71 dbt Tests</text>
+  <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">Currency Data Pipeline</text>
+  <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Pipeline end-to-end sob Arquitetura Medalhão</text>
+  <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">(Bronze, Silver e Gold) com dbt, PostgreSQL</text>
+  <text x="{PAD}" y="112" fill="{TEXT_COLOR}" font-size="11.5">e ingestão idempotente com retry/backoff.</text>
   <g transform="translate({PAD}, 128)">
     <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
-    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🏛️ Fonte: <tspan fill="{YELLOW}">Dados Abertos</tspan></text>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🏛️ Camadas: <tspan fill="{ACCENT}">Bronze ➔ Gold</tspan></text>
   </g>
   <g transform="translate({PAD+193}, 128)">
     <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
-    <text x="8" y="15" fill="{MUTED}" font-size="10.5">📐 Schema: <tspan fill="{ACCENT}">Star Schema</tspan></text>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🧪 Qualidade: <tspan fill="{GREEN}">71 testes dbt</tspan></text>
   </g>
   <g transform="translate({PAD}, 162)">
-    <rect x="0" width="58" height="20" rx="4" fill="{FRAME}"/>
-    <text x="29" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Python</text>
-    <rect x="64" width="58" height="20" rx="4" fill="{FRAME}"/>
-    <text x="93" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Pandas</text>
-    <rect x="128" width="76" height="20" rx="4" fill="{FRAME}"/>
-    <text x="166" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">PostgreSQL</text>
-    <rect x="210" width="58" height="20" rx="4" fill="{FRAME}"/>
-    <text x="239" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Docker</text>
+    <rect x="0" width="48" height="20" rx="4" fill="{FRAME}"/>
+    <text x="24" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">dbt</text>
+    <rect x="54" width="76" height="20" rx="4" fill="{FRAME}"/>
+    <text x="92" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">PostgreSQL</text>
+    <rect x="136" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="165" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Docker</text>
+    <rect x="200" width="72" height="20" rx="4" fill="{FRAME}"/>
+    <text x="236" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Medallion</text>
   </g>
   <line x1="0" y1="{H-26}" x2="{W}" y2="{H-26}" stroke="{FRAME}"/>
   <text x="{PAD}" y="{H-10}" fill="{TITLE_TEXT}" font-size="10">git:(main) • utf-8</text>
@@ -557,7 +557,7 @@ def generate_project_cards():
 </svg>"""
 
     p1 = os.path.join(REPO_DIR, "project-api-fetcher.svg")
-    p2 = os.path.join(REPO_DIR, "project-jp-spending.svg")
+    p2 = os.path.join(REPO_DIR, "project-dbt-pipeline.svg")
     with open(p1, "w", encoding="utf-8") as f:
         f.write(card1)
     with open(p2, "w", encoding="utf-8") as f:
