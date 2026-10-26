@@ -556,13 +556,105 @@ def generate_project_cards():
   <text x="{W-PAD}" y="{H-10}" fill="{ACCENT}" font-size="10" text-anchor="end">Ver Repositório ➜</text>
 </svg>"""
 
+    # Card 3: speech-to-prompt-pipeline
+    card3 = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">
+  <defs>
+    <linearGradient id="pbg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="{BG2}"/>
+      <stop offset="1" stop-color="{BG}"/>
+    </linearGradient>
+  </defs>
+  <rect width="{W}" height="{H}" rx="10" fill="url(#pbg3)"/>
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" fill="none" stroke="{FRAME}"/>
+  <line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>
+  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ff5f56"/>
+  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ffbd2e"/>
+  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#27c93f"/>
+  <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">speech-to-prompt/main.py</text>
+  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{GREEN}" font-size="10" text-anchor="end">● CUDA 12 GPU</text>
+  <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">Speech-to-Prompt &amp; Island</text>
+  <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Pipeline de voz offline para prompts de IA</text>
+  <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">com Faster-Whisper, Ollama (Qwen 2.5),</text>
+  <text x="{PAD}" y="112" fill="{TEXT_COLOR}" font-size="11.5">PostgreSQL e UI flutuante estilo Apple.</text>
+  <g transform="translate({PAD}, 128)">
+    <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🎙️ Áudio: <tspan fill="{ACCENT}">Faster-Whisper</tspan></text>
+  </g>
+  <g transform="translate({PAD+193}, 128)">
+    <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🧠 LLM: <tspan fill="{GREEN}">Ollama Qwen 2.5</tspan></text>
+  </g>
+  <g transform="translate({PAD}, 162)">
+    <rect x="0" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="29" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Python</text>
+    <rect x="64" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="93" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Ollama</text>
+    <rect x="128" width="54" height="20" rx="4" fill="{FRAME}"/>
+    <text x="155" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">CUDA</text>
+    <rect x="188" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="217" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Whisper</text>
+  </g>
+  <line x1="0" y1="{H-26}" x2="{W}" y2="{H-26}" stroke="{FRAME}"/>
+  <text x="{PAD}" y="{H-10}" fill="{TITLE_TEXT}" font-size="10">git:(main) • utf-8</text>
+  <text x="{W-PAD}" y="{H-10}" fill="{ACCENT}" font-size="10" text-anchor="end">Ver Repositório ➜</text>
+</svg>"""
+
+    # Card 4: locadora-veiculos-python
+    card4 = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="{FONT}">
+  <defs>
+    <linearGradient id="pbg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="{BG2}"/>
+      <stop offset="1" stop-color="{BG}"/>
+    </linearGradient>
+  </defs>
+  <rect width="{W}" height="{H}" rx="10" fill="url(#pbg4)"/>
+  <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" fill="none" stroke="{FRAME}"/>
+  <line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>
+  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ff5f56"/>
+  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ffbd2e"/>
+  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#27c93f"/>
+  <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">locadora-veiculos/main.py</text>
+  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{YELLOW}" font-size="10" text-anchor="end">● UNIESP CS</text>
+  <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">Sistema de Locadora</text>
+  <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Sistema gerencial em Python puro aplicando</text>
+  <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">POO, controle de estoque de frotas,</text>
+  <text x="{PAD}" y="112" fill="{TEXT_COLOR}" font-size="11.5">cálculo de seguros e relatórios no terminal.</text>
+  <g transform="translate({PAD}, 128)">
+    <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🚗 Domínio: <tspan fill="{ACCENT}">Gestão de Frotas</tspan></text>
+  </g>
+  <g transform="translate({PAD+193}, 128)">
+    <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🎯 Paradigma: <tspan fill="{YELLOW}">POO &amp; CLI</tspan></text>
+  </g>
+  <g transform="translate({PAD}, 162)">
+    <rect x="0" width="58" height="20" rx="4" fill="{FRAME}"/>
+    <text x="29" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">Python</text>
+    <rect x="64" width="48" height="20" rx="4" fill="{FRAME}"/>
+    <text x="88" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">POO</text>
+    <rect x="118" width="48" height="20" rx="4" fill="{FRAME}"/>
+    <text x="142" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">CLI</text>
+    <rect x="172" width="64" height="20" rx="4" fill="{FRAME}"/>
+    <text x="204" y="14" fill="{TEXT_COLOR}" font-size="10" text-anchor="middle">UNIESP</text>
+  </g>
+  <line x1="0" y1="{H-26}" x2="{W}" y2="{H-26}" stroke="{FRAME}"/>
+  <text x="{PAD}" y="{H-10}" fill="{TITLE_TEXT}" font-size="10">git:(main) • utf-8</text>
+  <text x="{W-PAD}" y="{H-10}" fill="{ACCENT}" font-size="10" text-anchor="end">Ver Repositório ➜</text>
+</svg>"""
+
     p1 = os.path.join(REPO_DIR, "project-api-fetcher.svg")
     p2 = os.path.join(REPO_DIR, "project-dbt-pipeline.svg")
+    p3 = os.path.join(REPO_DIR, "project-speech-to-prompt.svg")
+    p4 = os.path.join(REPO_DIR, "project-locadora.svg")
     with open(p1, "w", encoding="utf-8") as f:
         f.write(card1)
     with open(p2, "w", encoding="utf-8") as f:
         f.write(card2)
-    print(f"[4/4] Wrote {p1} and {p2}")
+    with open(p3, "w", encoding="utf-8") as f:
+        f.write(card3)
+    with open(p4, "w", encoding="utf-8") as f:
+        f.write(card4)
+    print(f"[4/4] Wrote {p1}, {p2}, {p3}, {p4}")
 
 
 if __name__ == "__main__":

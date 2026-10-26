@@ -34,6 +34,15 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/daniloofrs/speech-to-prompt-pipeline">
+    <img src="./project-speech-to-prompt.svg" width="415" alt="Speech-to-Prompt Pipeline & Island" />
+  </a>
+  <a href="https://github.com/daniloofrs/locadora-veiculos-python">
+    <img src="./project-locadora.svg" width="415" alt="Sistema Locadora de Veículos" />
+  </a>
+</p>
+
 <br>
 
 <p align="center">
