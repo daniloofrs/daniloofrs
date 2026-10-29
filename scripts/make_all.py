@@ -1,4 +1,4 @@
-import os
+﻿import os
 import re
 import urllib.request
 import html
@@ -68,7 +68,7 @@ def generate_ascii_svg():
         f'<line x1="0" y1="{TITLEBAR_H}" x2="{CANVAS_W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>',
     ]
 
-    for i, dot in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
+    for i, dot in enumerate(["#3b82f6", "#a78bfa", "#e0e7ff"]):
         p.append(f'<circle cx="{PAD + i*20}" cy="{TITLEBAR_H/2}" r="8" fill="{dot}"/>')
     p.append(
         f'<text x="{CANVAS_W/2}" y="{TITLEBAR_H/2 + CHROME_FS*0.35:.1f}" fill="{TITLE_TEXT}" '
@@ -134,11 +134,11 @@ def generate_info_card():
     BG2 = "#111722"
     FRAME = "#30363d"
     TITLE_TEXT = "#7d8590"
-    KEY = "#39d353"
+    KEY = "#7cb7ff"
     VAL = "#c9d1d9"
     ACCENT = "#58a6ff"
     DIM = "#8b949e"
-    BULLET = "#39d353"
+    BULLET = "#a78bfa"
 
     W, H = 620, 506
     PAD = 20
@@ -187,9 +187,9 @@ def generate_info_card():
         f'<rect width="{W}" height="{H}" rx="12" fill="url(#ibg)"/>',
         f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="12" fill="none" stroke="{FRAME}"/>',
         f'<line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>',
-        f'<circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="5" fill="#ff5f56"/>',
-        f'<circle cx="{PAD+16}" cy="{TITLEBAR_H/2}" r="5" fill="#ffbd2e"/>',
-        f'<circle cx="{PAD+32}" cy="{TITLEBAR_H/2}" r="5" fill="#27c93f"/>',
+        f'<circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="5" fill="#3b82f6"/>',
+        f'<circle cx="{PAD+16}" cy="{TITLEBAR_H/2}" r="5" fill="#a78bfa"/>',
+        f'<circle cx="{PAD+32}" cy="{TITLEBAR_H/2}" r="5" fill="#e0e7ff"/>',
         f'<text x="{W/2:.0f}" y="{TITLEBAR_H/2 + 4:.0f}" fill="{TITLE_TEXT}" text-anchor="middle" font-size="12">danilo@github: ~$ fastfetch</text>',
     ]
 
@@ -296,7 +296,7 @@ def generate_heatmap_svg():
         else:
             break
 
-    PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+    PALETTE = ["#161b22", "#22338f", "#2f5bea", "#5ba3f5", "#a78bfa", "#f5f3ff"]
     CELL = 12
     GAP = 3
     STEP = CELL + GAP
@@ -311,8 +311,8 @@ def generate_heatmap_svg():
     MUTED = "#7d8590"
     TEXT = "#e6edf3"
     ACCENT = "#22d3ee"
-    GREEN = "#39d353"
-    GOLD = "#f2cc60"
+    HILITE = "#a78bfa"
+    PINK = "#f0abfc"
 
     COL_T = 0.018
     ROW_T = 0.045
@@ -381,7 +381,7 @@ def generate_heatmap_svg():
         f'<line x1="0" y1="{TITLEBAR_H}" x2="{canvas_w}" y2="{TITLEBAR_H}" stroke="{FRAME}" stroke-opacity="0.35"/>',
     ]
 
-    for i, dot in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
+    for i, dot in enumerate(["#3b82f6", "#a78bfa", "#e0e7ff"]):
         p.append(f'<circle cx="{PAD + i*16}" cy="{TITLEBAR_H/2}" r="5" fill="{dot}"/>')
     p.append(
         f'<text x="{canvas_w/2}" y="{TITLEBAR_H/2 + 4}" fill="{MUTED}" '
@@ -432,7 +432,7 @@ def generate_heatmap_svg():
 
     rng_start, rng_end = days[0]["date"], days[-1]["date"]
     ly = sep_y + 24
-    p.append(f'<text x="{PAD}" y="{ly}" font-size="13" fill="{GREEN}" xml:space="preserve">'
+    p.append(f'<text x="{PAD}" y="{ly}" font-size="13" fill="{HILITE}" xml:space="preserve">'
              f'<tspan font-weight="700">{total:,}</tspan>'
              f'<tspan fill="{MUTED}"> contribuições no último ano</tspan></text>')
     p.append(f'<text x="{canvas_w - PAD}" y="{ly}" font-size="12" fill="{MUTED}" text-anchor="end">{rng_start} &#8594; {rng_end}</text>')
@@ -441,7 +441,7 @@ def generate_heatmap_svg():
              f'<tspan fill="{ACCENT}" font-weight="700">{cur} dias</tspan>'
              f'<tspan fill="{MUTED}">   &#183;   recorde </tspan>'
              f'<tspan fill="{ACCENT}" font-weight="700">{longest} dias</tspan></text>')
-    p.append(f'<text x="{canvas_w - PAD}" y="{ly}" font-size="12" fill="{MUTED}" text-anchor="end">melhor dia <tspan fill="{GOLD}" font-weight="700">{best["count"]}</tspan> em {best["date"]}</text>')
+    p.append(f'<text x="{canvas_w - PAD}" y="{ly}" font-size="12" fill="{MUTED}" text-anchor="end">melhor dia <tspan fill="{PINK}" font-weight="700">{best["count"]}</tspan> em {best["date"]}</text>')
 
     p.append("</svg>")
     out_path = os.path.join(REPO_DIR, "contrib-heatmap.svg")
@@ -465,8 +465,8 @@ def generate_project_cards():
     TITLE_TEXT = "#7d8590"
     TEXT_COLOR = "#c9d1d9"
     ACCENT = "#38bdf8"
-    GREEN = "#39d353"
-    YELLOW = "#f2cc60"
+    HILITE = "#a78bfa"
+    PINK = "#f0abfc"
     MUTED = "#8b949e"
     BADGE_BG = "#1f242c"
 
@@ -481,18 +481,18 @@ def generate_project_cards():
   <rect width="{W}" height="{H}" rx="10" fill="url(#pbg)"/>
   <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" fill="none" stroke="{FRAME}"/>
   <line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>
-  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ff5f56"/>
-  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ffbd2e"/>
-  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#27c93f"/>
+  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#3b82f6"/>
+  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#a78bfa"/>
+  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#e0e7ff"/>
   <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">api-data-fetcher/main.py</text>
-  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{GREEN}" font-size="10" text-anchor="end">● Docker UP</text>
+  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{HILITE}" font-size="10" text-anchor="end">● Docker UP</text>
   <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">API Data Fetcher</text>
   <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Pipeline em Python consumindo cotações</text>
   <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">via API REST com persistência contínua</text>
   <text x="{PAD}" y="112" fill="{TEXT_COLOR}" font-size="11.5">em banco PostgreSQL e append em CSV.</text>
   <g transform="translate({PAD}, 128)">
     <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
-    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🐳 Docker: <tspan fill="{GREEN}">2 containers</tspan></text>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🐳 Docker: <tspan fill="{HILITE}">2 containers</tspan></text>
   </g>
   <g transform="translate({PAD+193}, 128)">
     <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
@@ -524,11 +524,11 @@ def generate_project_cards():
   <rect width="{W}" height="{H}" rx="10" fill="url(#pbg2)"/>
   <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" fill="none" stroke="{FRAME}"/>
   <line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>
-  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ff5f56"/>
-  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ffbd2e"/>
-  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#27c93f"/>
+  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#3b82f6"/>
+  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#a78bfa"/>
+  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#e0e7ff"/>
   <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">data-pipeline-dbt/models</text>
-  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{GREEN}" font-size="10" text-anchor="end">● 71 dbt Tests</text>
+  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{HILITE}" font-size="10" text-anchor="end">● 71 dbt Tests</text>
   <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">Currency Data Pipeline</text>
   <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Pipeline end-to-end sob Arquitetura Medalhão</text>
   <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">(Bronze, Silver e Gold) com dbt, PostgreSQL</text>
@@ -539,7 +539,7 @@ def generate_project_cards():
   </g>
   <g transform="translate({PAD+193}, 128)">
     <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
-    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🧪 Qualidade: <tspan fill="{GREEN}">71 testes dbt</tspan></text>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🧪 Qualidade: <tspan fill="{HILITE}">71 testes dbt</tspan></text>
   </g>
   <g transform="translate({PAD}, 162)">
     <rect x="0" width="48" height="20" rx="4" fill="{FRAME}"/>
@@ -567,11 +567,11 @@ def generate_project_cards():
   <rect width="{W}" height="{H}" rx="10" fill="url(#pbg3)"/>
   <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" fill="none" stroke="{FRAME}"/>
   <line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>
-  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ff5f56"/>
-  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ffbd2e"/>
-  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#27c93f"/>
+  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#3b82f6"/>
+  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#a78bfa"/>
+  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#e0e7ff"/>
   <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">speech-to-prompt/main.py</text>
-  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{GREEN}" font-size="10" text-anchor="end">● CUDA 12 GPU</text>
+  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{HILITE}" font-size="10" text-anchor="end">● CUDA 12 GPU</text>
   <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">Speech-to-Prompt &amp; Island</text>
   <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Pipeline de voz offline para prompts de IA</text>
   <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">com Faster-Whisper, Ollama (Qwen 2.5),</text>
@@ -582,7 +582,7 @@ def generate_project_cards():
   </g>
   <g transform="translate({PAD+193}, 128)">
     <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
-    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🧠 LLM: <tspan fill="{GREEN}">Ollama Qwen 2.5</tspan></text>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🧠 LLM: <tspan fill="{HILITE}">Ollama Qwen 2.5</tspan></text>
   </g>
   <g transform="translate({PAD}, 162)">
     <rect x="0" width="58" height="20" rx="4" fill="{FRAME}"/>
@@ -610,11 +610,11 @@ def generate_project_cards():
   <rect width="{W}" height="{H}" rx="10" fill="url(#pbg4)"/>
   <rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="10" fill="none" stroke="{FRAME}"/>
   <line x1="0" y1="{TITLEBAR_H}" x2="{W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>
-  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ff5f56"/>
-  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#ffbd2e"/>
-  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#27c93f"/>
+  <circle cx="{PAD}" cy="{TITLEBAR_H/2}" r="4.5" fill="#3b82f6"/>
+  <circle cx="{PAD+14}" cy="{TITLEBAR_H/2}" r="4.5" fill="#a78bfa"/>
+  <circle cx="{PAD+28}" cy="{TITLEBAR_H/2}" r="4.5" fill="#e0e7ff"/>
   <text x="{PAD+44}" y="{TITLEBAR_H/2 + 3.5}" fill="{TITLE_TEXT}" font-size="11">locadora-veiculos/main.py</text>
-  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{YELLOW}" font-size="10" text-anchor="end">● UNIESP CS</text>
+  <text x="{W-PAD}" y="{TITLEBAR_H/2 + 3.5}" fill="{PINK}" font-size="10" text-anchor="end">● UNIESP CS</text>
   <text x="{PAD}" y="56" fill="{ACCENT}" font-size="15" font-weight="bold">Sistema de Locadora</text>
   <text x="{PAD}" y="78" fill="{TEXT_COLOR}" font-size="11.5">Sistema gerencial em Python puro aplicando</text>
   <text x="{PAD}" y="95" fill="{TEXT_COLOR}" font-size="11.5">POO, controle de estoque de frotas,</text>
@@ -625,7 +625,7 @@ def generate_project_cards():
   </g>
   <g transform="translate({PAD+193}, 128)">
     <rect width="185" height="22" rx="4" fill="{BADGE_BG}" stroke="{FRAME}" stroke-width="0.7"/>
-    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🎯 Paradigma: <tspan fill="{YELLOW}">POO &amp; CLI</tspan></text>
+    <text x="8" y="15" fill="{MUTED}" font-size="10.5">🎯 Paradigma: <tspan fill="{PINK}">POO &amp; CLI</tspan></text>
   </g>
   <g transform="translate({PAD}, 162)">
     <rect x="0" width="58" height="20" rx="4" fill="{FRAME}"/>

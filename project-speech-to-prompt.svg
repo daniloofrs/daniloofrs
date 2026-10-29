@@ -8,11 +8,11 @@
   <rect width="415" height="230" rx="10" fill="url(#pbg3)"/>
   <rect x="0.5" y="0.5" width="414" height="229" rx="10" fill="none" stroke="#30363d"/>
   <line x1="0" y1="30" x2="415" y2="30" stroke="#30363d"/>
-  <circle cx="16" cy="15.0" r="4.5" fill="#ff5f56"/>
-  <circle cx="30" cy="15.0" r="4.5" fill="#ffbd2e"/>
-  <circle cx="44" cy="15.0" r="4.5" fill="#27c93f"/>
+  <circle cx="16" cy="15.0" r="4.5" fill="#3b82f6"/>
+  <circle cx="30" cy="15.0" r="4.5" fill="#a78bfa"/>
+  <circle cx="44" cy="15.0" r="4.5" fill="#e0e7ff"/>
   <text x="60" y="18.5" fill="#7d8590" font-size="11">speech-to-prompt/main.py</text>
-  <text x="399" y="18.5" fill="#39d353" font-size="10" text-anchor="end">● CUDA 12 GPU</text>
+  <text x="399" y="18.5" fill="#a78bfa" font-size="10" text-anchor="end">● CUDA 12 GPU</text>
   <text x="16" y="56" fill="#38bdf8" font-size="15" font-weight="bold">Speech-to-Prompt &amp; Island</text>
   <text x="16" y="78" fill="#c9d1d9" font-size="11.5">Pipeline de voz offline para prompts de IA</text>
   <text x="16" y="95" fill="#c9d1d9" font-size="11.5">com Faster-Whisper, Ollama (Qwen 2.5),</text>
@@ -23,7 +23,7 @@
   </g>
   <g transform="translate(209, 128)">
     <rect width="185" height="22" rx="4" fill="#1f242c" stroke="#30363d" stroke-width="0.7"/>
-    <text x="8" y="15" fill="#8b949e" font-size="10.5">🧠 LLM: <tspan fill="#39d353">Ollama Qwen 2.5</tspan></text>
+    <text x="8" y="15" fill="#8b949e" font-size="10.5">🧠 LLM: <tspan fill="#a78bfa">Ollama Qwen 2.5</tspan></text>
   </g>
   <g transform="translate(16, 162)">
     <rect x="0" width="58" height="20" rx="4" fill="#30363d"/>
