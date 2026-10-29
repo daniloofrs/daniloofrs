@@ -1,4 +1,5 @@
-﻿import os
+import math
+import os
 import re
 import urllib.request
 import html
@@ -6,6 +7,39 @@ import datetime
 from PIL import Image, ImageEnhance, ImageOps
 
 REPO_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def _burst_svg(cx, cy, y0, y1, width):
+    """Radial glow + faint light rays (burst) drawn behind the ASCII portrait."""
+    R = 560
+    n_rays = 44
+    rays = []
+    for k in range(n_rays):
+        # deterministic jitter so rays have uneven width, like the avatar's burst
+        w = 0.010 + 0.014 * abs(math.sin(k * 2.399))
+        a = 2 * math.pi * k / n_rays + 0.08 * math.sin(k * 1.7)
+        p1 = (cx + R * math.cos(a - w), cy + R * math.sin(a - w))
+        p2 = (cx + R * math.cos(a + w), cy + R * math.sin(a + w))
+        rays.append(f'<polygon points="{cx:.1f},{cy:.1f} {p1[0]:.1f},{p1[1]:.1f} {p2[0]:.1f},{p2[1]:.1f}"/>')
+    return (
+        '<defs>'
+        f'<radialGradient id="burst-glow" gradientUnits="userSpaceOnUse" cx="{cx}" cy="{cy}" r="430">'
+        '<stop offset="0" stop-color="#ffffff" stop-opacity="0.11"/>'
+        '<stop offset="0.22" stop-color="#7cb7ff" stop-opacity="0.10"/>'
+        '<stop offset="0.55" stop-color="#3b82f6" stop-opacity="0.055"/>'
+        '<stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>'
+        f'<radialGradient id="burst-rays" gradientUnits="userSpaceOnUse" cx="{cx}" cy="{cy}" r="{R}">'
+        '<stop offset="0" stop-color="#ffffff" stop-opacity="0.12"/>'
+        '<stop offset="0.35" stop-color="#7cb7ff" stop-opacity="0.065"/>'
+        '<stop offset="0.7" stop-color="#a78bfa" stop-opacity="0.03"/>'
+        '<stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>'
+        f'<clipPath id="burst-clip"><rect x="0" y="{y0}" width="{width}" height="{y1 - y0:.1f}"/></clipPath>'
+        '</defs>'
+        '<g clip-path="url(#burst-clip)">'
+        f'<circle cx="{cx}" cy="{cy}" r="430" fill="url(#burst-glow)"/>'
+        f'<g fill="url(#burst-rays)">{"".join(rays)}</g>'
+        '</g>'
+    )
+
 
 # ==========================================
 # 1. MAKE ASCII SVG (avi-ascii.svg)
@@ -64,6 +98,8 @@ def generate_ascii_svg():
         f'<stop offset="0" stop-color="{BG2}"/>',
         f'<stop offset="1" stop-color="{BG}"/></linearGradient></defs>',
         f'<rect width="{CANVAS_W}" height="{CANVAS_H}" rx="12" fill="url(#abg)"/>',
+        _burst_svg(CANVAS_W / 2, art_top + ART_H * 0.42, TITLEBAR_H,
+                   TITLEBAR_H + ART_H + PAD * 0.35, CANVAS_W),
         f'<rect x="0.5" y="0.5" width="{CANVAS_W-1}" height="{CANVAS_H-1}" rx="12" fill="none" stroke="{FRAME}"/>',
         f'<line x1="0" y1="{TITLEBAR_H}" x2="{CANVAS_W}" y2="{TITLEBAR_H}" stroke="{FRAME}"/>',
     ]
