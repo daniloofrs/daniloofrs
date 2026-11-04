@@ -18,7 +18,7 @@
 <h3><code>danilo@github ~ $ cat stack.md</code></h3>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,postgres,docker,linux,bash,git,github,vscode" alt="Minha Stack" />
+  <img src="./assets/stack.svg" alt="Minha Stack" />
 </p>
 
 <br>
